@@ -5,8 +5,8 @@ import eyeq.util.client.model.UModelCreator;
 import eyeq.util.client.model.UModelLoader;
 import eyeq.util.client.model.gson.ItemmodelJsonFactory;
 import eyeq.util.client.renderer.ResourceLocationFactory;
-import eyeq.util.client.renderer.ULanguageCreator;
-import eyeq.util.client.renderer.ULanguageResourceManager;
+import eyeq.util.client.resource.ULanguageCreator;
+import eyeq.util.client.resource.lang.LanguageResourceManager;
 import eyeq.util.oredict.CategoryTypes;
 import eyeq.util.oredict.UOreDictionary;
 import net.minecraft.init.MobEffects;
@@ -28,7 +28,7 @@ import java.io.File;
 
 import static eyeq.moremeat.MoreMeat.MOD_ID;
 
-@Mod(modid = MOD_ID, version = "1.0", dependencies = "after:eyeq_util")
+@Mod(modid = MOD_ID, version = "1.1", dependencies = "after:eyeq_util")
 @Mod.EventBusSubscriber
 public class MoreMeat {
     public static final String MOD_ID = "eyeq_moremeat";
@@ -183,47 +183,47 @@ public class MoreMeat {
     public static void createFiles() {
         File project = new File("../1.11.2-MoreMeat");
 
-        ULanguageResourceManager language = new ULanguageResourceManager();
+        LanguageResourceManager language = new LanguageResourceManager();
 
-        language.register(ULanguageResourceManager.EN_US, batRaw, "Raw Bat Meat");
-        language.register(ULanguageResourceManager.JA_JP, batRaw, "生のコウモリ肉");
-        language.register(ULanguageResourceManager.EN_US, batCooked, "Cooked Bat Meat");
-        language.register(ULanguageResourceManager.JA_JP, batCooked, "焼いたコウモリ肉");
+        language.register(LanguageResourceManager.EN_US, batRaw, "Raw Bat Meat");
+        language.register(LanguageResourceManager.JA_JP, batRaw, "生のコウモリ肉");
+        language.register(LanguageResourceManager.EN_US, batCooked, "Cooked Bat Meat");
+        language.register(LanguageResourceManager.JA_JP, batCooked, "焼いたコウモリ肉");
 
-        language.register(ULanguageResourceManager.EN_US, bearRaw, "Raw Bear Meat");
-        language.register(ULanguageResourceManager.JA_JP, bearRaw, "生の熊肉");
-        language.register(ULanguageResourceManager.EN_US, bearCooked, "Cooked Bear Meat");
-        language.register(ULanguageResourceManager.JA_JP, bearCooked, "焼いた熊肉");
+        language.register(LanguageResourceManager.EN_US, bearRaw, "Raw Bear Meat");
+        language.register(LanguageResourceManager.JA_JP, bearRaw, "生の熊肉");
+        language.register(LanguageResourceManager.EN_US, bearCooked, "Cooked Bear Meat");
+        language.register(LanguageResourceManager.JA_JP, bearCooked, "焼いた熊肉");
 
-        language.register(ULanguageResourceManager.EN_US, horseRaw, "Raw Horse Meat");
-        language.register(ULanguageResourceManager.JA_JP, horseRaw, "生の馬肉");
-        language.register(ULanguageResourceManager.EN_US, horseCooked, "Cooked Horse Meat");
-        language.register(ULanguageResourceManager.JA_JP, horseCooked, "焼いた馬肉");
+        language.register(LanguageResourceManager.EN_US, horseRaw, "Raw Horse Meat");
+        language.register(LanguageResourceManager.JA_JP, horseRaw, "生の馬肉");
+        language.register(LanguageResourceManager.EN_US, horseCooked, "Cooked Horse Meat");
+        language.register(LanguageResourceManager.JA_JP, horseCooked, "焼いた馬肉");
 
-        language.register(ULanguageResourceManager.EN_US, humanFlesh, "Flesh Human");
-        language.register(ULanguageResourceManager.JA_JP, humanFlesh, "生の人肉");
-        language.register(ULanguageResourceManager.EN_US, humanCooked, "Cooked Human");
-        language.register(ULanguageResourceManager.JA_JP, humanCooked, "焼いた人肉");
+        language.register(LanguageResourceManager.EN_US, humanFlesh, "Flesh Human");
+        language.register(LanguageResourceManager.JA_JP, humanFlesh, "生の人肉");
+        language.register(LanguageResourceManager.EN_US, humanCooked, "Cooked Human");
+        language.register(LanguageResourceManager.JA_JP, humanCooked, "焼いた人肉");
 
-        language.register(ULanguageResourceManager.EN_US, llamaRaw, "Raw Llama Meat");
-        language.register(ULanguageResourceManager.JA_JP, llamaRaw, "生のラマ肉");
-        language.register(ULanguageResourceManager.EN_US, llamaCooked, "Cooked Llama Meat");
-        language.register(ULanguageResourceManager.JA_JP, llamaCooked, "焼いたラマ肉");
+        language.register(LanguageResourceManager.EN_US, llamaRaw, "Raw Llama Meat");
+        language.register(LanguageResourceManager.JA_JP, llamaRaw, "生のラマ肉");
+        language.register(LanguageResourceManager.EN_US, llamaCooked, "Cooked Llama Meat");
+        language.register(LanguageResourceManager.JA_JP, llamaCooked, "焼いたラマ肉");
 
-        language.register(ULanguageResourceManager.EN_US, ocelotRaw, "Raw Ocelot Meat");
-        language.register(ULanguageResourceManager.JA_JP, ocelotRaw, "生のヤマネコ肉");
-        language.register(ULanguageResourceManager.EN_US, ocelotCooked, "Cooked Ocelot Meat");
-        language.register(ULanguageResourceManager.JA_JP, ocelotCooked, "焼いたヤマネコ肉");
+        language.register(LanguageResourceManager.EN_US, ocelotRaw, "Raw Ocelot Meat");
+        language.register(LanguageResourceManager.JA_JP, ocelotRaw, "生のヤマネコ肉");
+        language.register(LanguageResourceManager.EN_US, ocelotCooked, "Cooked Ocelot Meat");
+        language.register(LanguageResourceManager.JA_JP, ocelotCooked, "焼いたヤマネコ肉");
 
-        language.register(ULanguageResourceManager.EN_US, squidRaw, "Raw Squid");
-        language.register(ULanguageResourceManager.JA_JP, squidRaw, "生イカ");
-        language.register(ULanguageResourceManager.EN_US, squidCooked, "Cooked Squid");
-        language.register(ULanguageResourceManager.JA_JP, squidCooked, "焼きイカ");
+        language.register(LanguageResourceManager.EN_US, squidRaw, "Raw Squid");
+        language.register(LanguageResourceManager.JA_JP, squidRaw, "生イカ");
+        language.register(LanguageResourceManager.EN_US, squidCooked, "Cooked Squid");
+        language.register(LanguageResourceManager.JA_JP, squidCooked, "焼きイカ");
 
-        language.register(ULanguageResourceManager.EN_US, wolfRaw, "Raw Wolf Meat");
-        language.register(ULanguageResourceManager.JA_JP, wolfRaw, "生のオオカミ肉");
-        language.register(ULanguageResourceManager.EN_US, wolfCooked, "Cooked Wolf Meat");
-        language.register(ULanguageResourceManager.JA_JP, wolfCooked, "焼いたオオカミ肉");
+        language.register(LanguageResourceManager.EN_US, wolfRaw, "Raw Wolf Meat");
+        language.register(LanguageResourceManager.JA_JP, wolfRaw, "生のオオカミ肉");
+        language.register(LanguageResourceManager.EN_US, wolfCooked, "Cooked Wolf Meat");
+        language.register(LanguageResourceManager.JA_JP, wolfCooked, "焼いたオオカミ肉");
 
         ULanguageCreator.createLanguage(project, MOD_ID, language);
 
