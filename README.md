@@ -1,6 +1,6 @@
 # [肉追加]MoreMeat
 
-[**ダウンロード**](https://github.com/eyeq/mod-1.11.2-MoreMeat/releases/download/1.0/1.11.2-MoreMeat-1.0.jar)
+[**ダウンロード**](https://github.com/eyeq/mod-1.11.2-MoreMeat/releases/download/1.1/1.11.2-MoreMeat-1.1.jar)
 
 様々な動物が肉をドロップするようになります。  
 configから、個別にドロップしないように設定できます。  
